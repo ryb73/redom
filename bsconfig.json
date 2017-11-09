@@ -1,0 +1,16 @@
+{
+    "name" : "redom",
+    "sources" : [
+        {
+            "dir" : "src",
+            "subdirs": true,
+            "public": [ "ReDom", "ReDomSuite" ]
+        },
+        {
+            "dir": "test",
+            "type": "dev"
+        }
+    ],
+    "package-specs": "es6",
+    "bsc-flags": [ "-w -10" ]
+}
