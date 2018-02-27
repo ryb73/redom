@@ -1,6 +1,6 @@
 type t;
 
-external search : t => string = "" [@@bs.get];
+[@bs.get] external search : t => string = "";
 
-external href : t => string = "" [@@bs.get];
-external setHref : t => string => unit = "href" [@@bs.set];
+[@bs.get] external href : t => string = "";
+[@bs.set] external setHref : (t, string) => unit = "href";

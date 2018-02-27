@@ -2,9 +2,9 @@ open ReDomSharedTypes;
 
 type t;
 
-include AbstractElement.Impl {
+include AbstractElement.Impl({
     type nonrec t = t;
     let tagName = "IFRAME";
-};
+});
 
-external contentWindow : Element.t t => window = "" [@@bs.get];
+[@bs.get] external contentWindow : Element.t(t) => window = "";

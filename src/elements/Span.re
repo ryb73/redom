@@ -1,6 +1,6 @@
 type t;
 
-include AbstractElement.Impl {
+include AbstractElement.Impl({
     type nonrec t = t;
     let tagName = "SPAN";
-};
+});

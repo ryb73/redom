@@ -1,5 +1,5 @@
-type t 'a;
+type t('a);
 
-external make : Dom.element => t unit = "%identity";
+external fromDom : Dom.element => t(unit) = "%identity";
 
-external tagName : t _ => string = "" [@@bs.get];
+[@bs.get] external tagName : t(_) => string = "";
