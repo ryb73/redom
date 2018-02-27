@@ -1,4 +1,4 @@
-open SharedTypes;
+open ReDomSharedTypes;
 
 external onMessage : window => _ [@bs.as "message"] => (MessageEvent.t => unit)
     => unit = "addEventListener" [@@bs.send];

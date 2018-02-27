@@ -1,4 +1,4 @@
-open SharedTypes;
+open ReDomSharedTypes;
 
 type t;
 
