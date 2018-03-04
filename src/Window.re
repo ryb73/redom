@@ -4,6 +4,10 @@ open ReDomSharedTypes;
 external onMessage : (window, [@bs.as "message"] _, MessageEvent.t => unit)
     => unit = "addEventListener";
 
+[@bs.send]
+external clearMessageListener : (window, [@bs.as "message"] _, MessageEvent.t => unit)
+    => unit = "removeEventListener";
+
 [@bs.send] external postMessage : (window, Js.Json.t, string) => unit = "";
 
 [@bs.get] external parent : window => window = "";

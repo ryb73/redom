@@ -2,10 +2,10 @@ open ReDomSuite;
 
 let mSpan = Document.getElementById(ReDom.document, "span");
 
-let spanFrame = Js.Option.getExn @@ mSpan
+let spanFrame = Js.Option.getExn(mSpan)
     |> IFrame.cast;
 
-Js.log @@ Js.Option.isSome(spanFrame);
+Js.log(Js.Option.isSome(spanFrame));
 
 let iFrame = Document.getElementById(ReDom.document, "iframe")
   |> Js.Option.getExn
@@ -14,9 +14,9 @@ let iFrame = Document.getElementById(ReDom.document, "iframe")
 switch iFrame {
     | None => Js.log("None")
     | Some(iFrame) =>
-        Js.log @@ Element.tagName(iFrame);
-        Js.log @@ IFrame.contentWindow(iFrame)
+        Js.log(Element.tagName(iFrame));
+        Js.log(IFrame.contentWindow(iFrame))
 };
 
 let span = mSpan |> Js.Option.getExn;
-Js.log @@ Element.tagName(span);
+Js.log(Element.tagName(span));
