@@ -12,8 +12,15 @@ module Location = {
 
 module Element = {
     include Element;
+
+    module IFrame = { include IFrame; };
+    module Span = { include Span; };
+    module Img = { include Img; };
 };
 
-module IFrame = {
-    include IFrame;
+module Events = {
+    module MessageEvent = { include MessageEvent };
+    module DragStartEvent = { include DragStartEvent };
+    module DragEvent = { include DragEvent };
+    module DataTransfer = { include DataTransfer };
 };

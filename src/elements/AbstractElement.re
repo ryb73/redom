@@ -4,13 +4,17 @@ module type T = {
 };
 
 module Impl = (T: T) => {
-  type _t = T.t;
+    type _t = Element.t(T.t);
 
-  external _unsafeCast : 'a => Element.t(_t) = "%identity";
-  let cast = (element) =>
-      if (Element.tagName(element) === T.tagName) {
-          Some(_unsafeCast(element))
-      } else {
-          None
-      };
+    external _unsafeCast : 'a => _t = "%identity";
+    let cast = (element) =>
+        if (Element.tagName(element) === T.tagName) {
+            Some(_unsafeCast(element))
+        } else {
+            None
+        };
+
+    let create = () =>
+        Document._createElement(ReDom.document, T.tagName)
+            |> _unsafeCast;
 };

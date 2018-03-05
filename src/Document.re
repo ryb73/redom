@@ -5,3 +5,6 @@ external _getElementById : (t, string) => Js.nullable(Element.t(unit)) = "getEle
 let getElementById = (document, id) =>
     _getElementById(document, id)
         |> Js.Nullable.to_opt;
+
+[@bs.send]
+external _createElement : t => string => Element.t(_) = "createElement";
