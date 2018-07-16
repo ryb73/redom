@@ -14,8 +14,9 @@ module Element = {
     include Element;
 
     module IFrame = { include IFrame; };
-    module Span = { include Span; };
     module Img = { include Img; };
+    module Input = { include Input; };
+    module Span = { include Span; };
 };
 
 module Events = {

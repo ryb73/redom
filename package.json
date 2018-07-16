@@ -23,7 +23,7 @@
     "url": "git@github.com:ryb73/redom.git"
   },
   "peerDependencies": {
-    "bs-platform": "^2.0.0"
+    "bs-platform": "^3.1.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
