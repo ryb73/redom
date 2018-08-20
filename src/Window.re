@@ -1,13 +1,13 @@
-open ReDomSharedTypes;
+type t = ReDomSharedTypes.window;
 
 [@bs.send]
-external onMessage : (window, [@bs.as "message"] _, MessageEvent.t => unit)
+external onMessage : (t, [@bs.as "message"] _, MessageEvent.t => unit)
     => unit = "addEventListener";
 
 [@bs.send]
-external clearMessageListener : (window, [@bs.as "message"] _, MessageEvent.t => unit)
+external clearMessageListener : (t, [@bs.as "message"] _, MessageEvent.t => unit)
     => unit = "removeEventListener";
 
-[@bs.send] external postMessage : (window, Js.Json.t, string) => unit = "";
+[@bs.send] external postMessage : (t, Js.Json.t, string) => unit = "";
 
-[@bs.get] external parent : window => window = "";
+[@bs.get] external parent : t => t = "";
