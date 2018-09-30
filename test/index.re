@@ -20,3 +20,6 @@ switch iFrame {
 
 let span = mSpan |> Js.Option.getExn;
 Js.log(Element.tagName(span));
+
+Js.log(ReDom.encodeUri("http://blah.com/?ok=s p a c e"));
+Js.log(ReDom.encodeUriComponent("http://blah.com/?ok=s p a c e"));

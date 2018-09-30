@@ -6,11 +6,11 @@ function rel(relPath) {
 
 module.exports = {
     entry: {
-        index: rel("lib/es6/test/index"),
+        index: rel("lib/js/test/index"),
     },
 
     output: {
-        path: rel("lib/es6/test"),
+        path: rel("lib/js/test"),
         filename: "[name]-out.js",
     },
 
