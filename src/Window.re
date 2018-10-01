@@ -19,3 +19,5 @@ let opener = (window) => _opener(window) |> Js.Nullable.toOption;
 let open_ = (~name=?, window, url) =>
     _open(window, url, Belt.Option.getWithDefault(name, "__blank"))
     |> Js.Null.toOption;
+
+[@bs.send] external close : t => unit = "";
