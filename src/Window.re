@@ -12,6 +12,9 @@ external clearMessageListener : (t, [@bs.as "message"] _, MessageEvent.t => unit
 
 [@bs.get] external parent : t => t = "";
 
+[@bs.get] external _opener : t => Js.Nullable.t(t) = "opener";
+let opener = (window) => _opener(window) |> Js.Nullable.toOption;
+
 [@bs.send] external _open : t => string => string => Js.null(t) = "open";
 let open_ = (~name=?, window, url) =>
     _open(window, url, Belt.Option.getWithDefault(name, "__blank"))
