@@ -23,3 +23,6 @@ Js.log(Element.tagName(span));
 
 Js.log(ReDom.encodeUri("http://blah.com/?ok=s p a c e"));
 Js.log(ReDom.encodeUriComponent("http://blah.com/?ok=s p a c e"));
+
+Window.alert("alrt", ReDom.window);
+Window.prompt(~message="prmtpt", ReDom.window) |> Js.log2("!");
