@@ -27,4 +27,5 @@ let open_ = (~name=?, window, url) =>
 [@bs.send] external _prompt :
     (t, ~message:string=?, ~default:string=?, unit) => Js.null(string) = "prompt";
 let prompt = (~message=?, ~default=?, window) =>
-    _prompt(window, ~message?, ~default?, ());
+    _prompt(window, ~message?, ~default?, ())
+    |> Js.Null.toOption;
