@@ -1,12 +1,12 @@
-type t;
+open Types;
 
 include AbstractElement.Impl({
-    type nonrec t = t;
+    type nonrec t = img;
     let tagName = "IMG";
 });
 
-[@bs.get] external src : Element.t(t) => string = "";
-[@bs.set] external setSrc : Element.t(t) => string => unit = "src";
+[@bs.get] external src : t => string = "";
+[@bs.set] external setSrc : t => string => unit = "src";
 
 let blank = {
     let img = create();

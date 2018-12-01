@@ -5,7 +5,7 @@
         {
             "dir" : "src",
             "subdirs": true,
-            "public": [ "Window", "Document", "Location", "Element" ]
+            "public": [ "Window", "Document", "Location", "Element", "Std" ]
         },
         {
             "dir": "test",

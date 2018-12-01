@@ -1,9 +1,7 @@
 type t;
 
 [@bs.val] external location : t = "";
-let _wrap = (f) =>
-    (~location=location) => f(location);
-let _wrapU = (f) =>
+let wrapU = (f) =>
     (~location=location, ()) => f(location);
 
 [@bs.get] external search : t => string = "";
@@ -13,7 +11,7 @@ let _wrapU = (f) =>
 
 [@bs.get] external hash : t => string = "";
 
-let search = _wrapU(search);
-let href = _wrapU(href);
-let setHref = _wrapU(setHref);
-let hash = _wrapU(hash);
+let search = wrapU(search);
+let href = wrapU(href);
+let setHref = wrapU(setHref);
+let hash = wrapU(hash);

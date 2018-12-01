@@ -1,8 +1,8 @@
-type t;
+open Types;
 
 include AbstractElement.Impl({
-    type nonrec t = t;
+    type t = input;
     let tagName = "INPUT";
 });
 
-[@bs.get] external value : Element.t(t) => string = "";
+[@bs.get] external value : t => string = "";

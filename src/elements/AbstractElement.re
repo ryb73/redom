@@ -6,9 +6,9 @@ module type T = {
 };
 
 module Impl = (T: T) => {
-    type _t = element(T.t);
+    type t = element(T.t);
 
-    external _unsafeCast : 'a => _t = "%identity";
+    external _unsafeCast : 'a => t = "%identity";
     let cast = (element) =>
         if (Element.tagName(element) === T.tagName) {
             Some(_unsafeCast(element))

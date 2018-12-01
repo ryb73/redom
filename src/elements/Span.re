@@ -1,6 +1,6 @@
-type t;
+open Types;
 
 include AbstractElement.Impl({
-    type nonrec t = t;
+    type nonrec t = span;
     let tagName = "SPAN";
 });

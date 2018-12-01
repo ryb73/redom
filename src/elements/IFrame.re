@@ -1,10 +1,8 @@
 open Types;
 
-type t;
-
 include AbstractElement.Impl({
-    type nonrec t = t;
+    type t = iframe;
     let tagName = "IFRAME";
 });
 
-[@bs.get] external contentWindow : element(t) => window = "";
+[@bs.get] external contentWindow : t => window = "";
