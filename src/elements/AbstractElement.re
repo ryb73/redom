@@ -1,10 +1,12 @@
+open Types;
+
 module type T = {
     type t;
     let tagName: string;
 };
 
 module Impl = (T: T) => {
-    type _t = Element.t(T.t);
+    type _t = element(T.t);
 
     external _unsafeCast : 'a => _t = "%identity";
     let cast = (element) =>
@@ -15,6 +17,6 @@ module Impl = (T: T) => {
         };
 
     let create = () =>
-        Document._createElement(ReDom.document, T.tagName)
-            |> _unsafeCast;
+        Document.createElement(T.tagName)
+        |> _unsafeCast;
 };

@@ -1,4 +1,4 @@
-open ReDomSharedTypes;
+open Types;
 
 type t = {.
     "data": Js.Json.t,

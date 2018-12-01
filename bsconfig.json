@@ -1,10 +1,11 @@
 {
-    "name" : "redom",
+    "name" : "re-dom",
+    "namespace": true,
     "sources" : [
         {
             "dir" : "src",
             "subdirs": true,
-            "public": [ "ReDom", "ReDomSuite" ]
+            "public": [ "Window", "Document", "Location", "Element" ]
         },
         {
             "dir": "test",
@@ -12,5 +13,4 @@
         }
     ],
     "refmt": 3,
-    "bsc-flags": [ "-w -10" ]
 }

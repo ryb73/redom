@@ -1,4 +1,4 @@
-open ReDomSharedTypes;
+open Types;
 
 type t;
 
@@ -7,4 +7,4 @@ include AbstractElement.Impl({
     let tagName = "IFRAME";
 });
 
-[@bs.get] external contentWindow : Element.t(t) => window = "";
+[@bs.get] external contentWindow : element(t) => window = "";

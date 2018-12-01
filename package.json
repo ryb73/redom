@@ -8,7 +8,7 @@
     "build": "npm run clean && bsb -make-world",
     "watch": "npm run clean && bsb -make-world -w",
     "clean": "rm -rf lib && bsb -clean-world",
-    "webpack": "webpack -w",
+    "webpack-test": "webpack -w",
     "postinstall": "[ ! -f package-links.json ] || ppl link-file"
   },
   "keywords": [

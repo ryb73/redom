@@ -1,13 +1,11 @@
-open ReDomSuite;
-
-let mSpan = Document.getElementById(ReDom.document, "span");
+let mSpan = Document.getElementById("span");
 
 let spanFrame = Js.Option.getExn(mSpan)
     |> IFrame.cast;
 
 Js.log(Js.Option.isSome(spanFrame));
 
-let iFrame = Document.getElementById(ReDom.document, "iframe")
+let iFrame = Document.getElementById("iframe")
   |> Js.Option.getExn
   |> IFrame.cast;
 
@@ -21,8 +19,8 @@ switch iFrame {
 let span = mSpan |> Js.Option.getExn;
 Js.log(Element.tagName(span));
 
-Js.log(ReDom.encodeUri("http://blah.com/?ok=s p a c e"));
-Js.log(ReDom.encodeUriComponent("http://blah.com/?ok=s p a c e"));
+Js.log(Std.encodeUri("http://blah.com/?ok=s p a c e"));
+Js.log(Std.encodeUriComponent("http://blah.com/?ok=s p a c e"));
 
-Window.alert("alrt", ReDom.window);
-Window.prompt(~message="prmtpt", ReDom.window) |> Js.log2("!");
+Window.alert("alrt");
+Window.prompt(~message="prmtpt") |> Js.log2("!");

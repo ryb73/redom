@@ -1,4 +1,4 @@
-type t('a);
+type t('a) = Types.element('a);
 
 external fromDom : Dom.element => t(unit) = "%identity";
 

@@ -1,10 +1,20 @@
+open Types;
+
 type t;
 
-[@bs.send]
-external _getElementById : (t, string) => Js.nullable(Element.t(unit)) = "getElementById";
-let getElementById = (document, id) =>
-    _getElementById(document, id)
-        |> Js.Nullable.toOption;
+[@bs.val] external document : t = "";
+let _wrap = (f) =>
+    (~document=document) => f(document);
+let _wrapU = (f) =>
+    (~document=document, ()) => f(document);
 
 [@bs.send]
-external _createElement : t => string => Element.t(_) = "createElement";
+external getElementById : (t, string) => Js.nullable(element(unit)) = "getElementById";
+
+[@bs.send] external createElement : t => string => element(unit) = "createElement";
+
+let getElementById = (~document=document, id) =>
+    _wrap(getElementById)(~document, id)
+    |> Js.Nullable.toOption;
+
+let createElement = _wrap(createElement);
