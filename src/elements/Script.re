@@ -1,8 +1,8 @@
 open Types;
 
 include AbstractElement.Impl({
-    type nonrec t = img;
-    let tagName = "IMG";
+    type t = script;
+    let tagName = "SCRIPT";
 });
 
 [@bs.get] external src : t => string = "";
@@ -11,7 +11,3 @@ let setSrc = (loc, elem) => {
     setSrc(elem, loc);
     elem;
 };
-
-let blank =
-    create()
-    |> setSrc("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
