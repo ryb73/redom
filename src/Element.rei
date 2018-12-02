@@ -1,11 +1,13 @@
 type t('a) = Types.element('a);
 
-let appendChild: (t('a), t('b)) => t('a);
+let appendChild: (~parent: t('a), ~child: t('b)) => t('b);
 let fromDom: Dom.element => t(unit);
-let tagName: t('a) => string;
+let innerHtml: t('a) => unit;
+let onDrag: (DragEvent.t => unit, t('a)) => unit;
+let onDragEnd: (DragEndEvent.t => unit, t('a)) => unit;
+let setInnerHtml: (string, t('a)) => t('a);
 let scrollWidth: t('a) => int;
 let scrollHeight: t('a) => int;
 let scrollLeft: t('a) => int;
 let scrollTop: t('a) => int;
-let onDrag: (DragEvent.t => unit, t('a)) => unit;
-let onDragEnd: (DragEndEvent.t => unit, t('a)) => unit;
+let tagName: t('a) => string;
