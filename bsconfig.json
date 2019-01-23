@@ -5,11 +5,11 @@
     "sources": [
         {
             "dir": "src",
-            "public": [ "Window", "Document", "Location", "Element", "Std", "Types", "Events" ],
+            "public": [ "ReDom" ],
         },
         {
             "dir": "src/elements",
-            "public": [ "Body", "IFrame", "Img", "Input", "Script", "Span" ],
+            "public": [],
         },
         {
             "dir": "src/events",
