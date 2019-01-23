@@ -1,7 +1,7 @@
 {
-    "name": "re-dom",
+    "name": "@ryb73/re-dom",
     "namespace": true,
-    "bs-dependencies": [ "decco" ],
+    "bs-dependencies": [ "@ryb73/decco" ],
     "sources": [
         {
             "dir": "src",

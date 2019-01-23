@@ -5,6 +5,8 @@ function rel(relPath) {
 }
 
 module.exports = {
+    mode: "development",
+
     entry: {
         index: rel("lib/js/test/index"),
     },
