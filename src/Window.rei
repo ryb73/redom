@@ -5,8 +5,8 @@ let window: t;
 
 let alert: (~window: t=?, string) => unit;
 let close: (~window: t=?, unit) => unit;
-let onLoad: (~window: t=?, Events.LoadEvent.t => unit) => unit;
-let onMessage: (~window: t=?, Events.MessageEvent.t => unit) => listener;
+let onLoad: (~window: t=?, LoadEvent.t => unit) => unit;
+let onMessage: (~window: t=?, MessageEvent.t => unit) => listener;
 let open_: (~window: t=?, ~name: string=?, string) => option(t);
 let opener: (~window: t=?, unit) => option(t);
 let parent: (~window: t=?, unit) => t;

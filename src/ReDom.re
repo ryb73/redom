@@ -1,6 +1,5 @@
 module Document = { include Document; };
 module Element = { include Element; };
-module Events = { include Events; };
 module Location = { include Location; };
 module Std = { include Std; };
 module Types = { include ReDomTypes; };
@@ -12,3 +11,11 @@ module Img = { include Img; };
 module Input = { include Input; };
 module Script = { include Script; };
 module Span = { include Span; };
+
+module Events = {
+    module MessageEvent = { include MessageEvent };
+    module DragStartEvent = { include DragStartEvent };
+    module DragEvent = { include DragEvent };
+    module DataTransfer = { include DataTransfer };
+    module LoadEvent = { include LoadEvent };
+};

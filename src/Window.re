@@ -13,7 +13,7 @@ type listener = Js.Json.t => unit;
 [@bs.send] external alert: t => string => unit = "";
 [@bs.send] external close: t => unit = "";
 [@bs.send] external onLoad:
-    (t, [@bs.as "load"] _, Events.LoadEvent.t => unit) => unit = "addEventListener";
+    (t, [@bs.as "load"] _, LoadEvent.t => unit) => unit = "addEventListener";
 [@bs.send] external onMessage:
     (t, [@bs.as "message"] _, listener) => unit = "addEventListener";
 [@bs.get] external opener: t => Js.Nullable.t(t) = "opener";
@@ -33,7 +33,7 @@ let postMessage = wrap(postMessage);
 
 let onMessage = (~window=window, listener) => {
     let listener = (json) =>
-        Events.MessageEvent.t_decode(json)
+        MessageEvent.t_decode(json)
         |> Belt.Result.getExn
         |> listener;
 
