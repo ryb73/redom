@@ -1,11 +1,19 @@
 {
-    "name" : "re-dom",
+    "name": "re-dom",
     "namespace": true,
-    "sources" : [
+    "bs-dependencies": [ "decco" ],
+    "sources": [
         {
-            "dir" : "src",
-            "subdirs": true,
-            "public": [ "Window", "Document", "Location", "Element", "Std", "Types" ]
+            "dir": "src",
+            "public": [ "Window", "Document", "Location", "Element", "Std", "Types", "Events" ],
+        },
+        {
+            "dir": "src/elements",
+            "public": [ "Body", "IFrame", "Img", "Input", "Script", "Span" ],
+        },
+        {
+            "dir": "src/events",
+            "public": [],
         },
         {
             "dir": "test",
@@ -13,4 +21,5 @@
         }
     ],
     "refmt": 3,
+    "ppx-flags": [ "ppx_decco" ],
 }

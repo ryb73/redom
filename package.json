@@ -28,8 +28,11 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^8.0.4",
     "rollup-plugin-node-resolve": "^3.0.0",
     "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "@ryb73/decco": "0.0.1"
   }
 }

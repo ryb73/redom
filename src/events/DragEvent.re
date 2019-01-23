@@ -1,7 +1,7 @@
-type t = {.
-  "screenX": int,
-  "screenY": int,
-  "clientX": int,
-  "clientY": int
+[@decco]
+type t = {
+    clientX: int,
+    clientY: int,
+    screenX: int,
+    screenY: int,
 };
-external unsafeCast : _ => t = "%identity";

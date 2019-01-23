@@ -1,7 +1,9 @@
 open Types;
+open Decco;
 
-type t = {.
-    "data": Js.Json.t,
-    "origin": string,
-    "source": window
+[@decco]
+type t = {
+    data: Js.Json.t,
+    origin: string,
+    source: [@decco.codec Codecs.magic] window
 };
