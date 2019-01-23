@@ -1,5 +1,5 @@
-type body;
 type element('a);
+type body;
 type iframe;
 type img;
 type input;

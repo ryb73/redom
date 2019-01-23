@@ -3,7 +3,7 @@ module Element = { include Element; };
 module Events = { include Events; };
 module Location = { include Location; };
 module Std = { include Std; };
-module Types = { include Types; };
+module Types = { include ReDomTypes; };
 module Window = { include Window; };
 
 module Body = { include Body; };
