@@ -1,4 +1,4 @@
-open Types;
+open ReDomTypes;
 
 module type T = {
     type t;
@@ -8,15 +8,15 @@ module type T = {
 module Impl = (T: T) => {
     type t = element(T.t);
 
-    external _unsafeCast : 'a => t = "%identity";
+    external unsafeCast : 'a => t = "%identity";
     let cast = (element) =>
         if (Element.tagName(element) === T.tagName) {
-            Some(_unsafeCast(element))
+            Some(unsafeCast(element))
         } else {
             None
         };
 
     let create = () =>
         Document.createElement(T.tagName)
-        |> _unsafeCast;
+        |> unsafeCast;
 };

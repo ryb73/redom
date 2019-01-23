@@ -1,11 +1,11 @@
-open Types;
+open ReDomTypes;
 
 type t;
 
 [@bs.val] external document: t = "";
-let _wrap = (f) =>
+let wrap = (f) =>
     (~document=document) => f(document);
-let _wrapU = (f) =>
+let wrapU = (f) =>
     (~document=document, ()) => f(document);
 
 [@bs.get] external body: t => element(body) = "";
@@ -13,9 +13,9 @@ let _wrapU = (f) =>
 [@bs.send] external getElementById:
     (t, string) => Js.nullable(element(unit)) = "getElementById";
 
-let body = _wrapU(body);
-let createElement = _wrap(createElement);
+let body = wrapU(body);
+let createElement = wrap(createElement);
 
 let getElementById = (~document=document, id) =>
-    _wrap(getElementById)(~document, id)
+    wrap(getElementById)(~document, id)
     |> Js.Nullable.toOption;

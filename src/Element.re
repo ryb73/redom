@@ -1,4 +1,4 @@
-type t('a) = Types.element('a);
+type t('a) = ReDomTypes.element('a);
 
 external fromDom: Dom.element => t(unit) = "%identity";
 

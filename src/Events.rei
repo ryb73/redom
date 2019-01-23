@@ -1,5 +1,5 @@
 module MessageEvent: {
-    [@decco.decode] type t = { data: Js.Json.t, origin: string, source: Types.window };
+    [@decco.decode] type t = { data: Js.Json.t, origin: string, source: ReDomTypes.window };
 };
 
 module DragStartEvent: {
@@ -13,7 +13,7 @@ module DragEvent: {
 
 module DataTransfer: {
     type t = DataTransfer.t;
-    let setDragImage: (Types.element('a), int, int, t) => unit;
+    let setDragImage: (ReDomTypes.element('a), int, int, t) => unit;
 };
 
 module LoadEvent: {

@@ -1,4 +1,4 @@
-type t('a) = Types.element('a);
+type t('a) = ReDomTypes.element('a);
 
 let appendChild: (~parent: t('a), ~child: t('b)) => t('b);
 let fromDom: Dom.element => t(unit);

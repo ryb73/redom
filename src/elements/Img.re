@@ -1,4 +1,4 @@
-open Types;
+open ReDomTypes;
 
 include AbstractElement.Impl({
     type nonrec t = img;

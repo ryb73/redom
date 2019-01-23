@@ -1,4 +1,4 @@
-type t = Types.window;
+type t = ReDomTypes.window;
 
 [@bs.val] external window: t = "";
 let wrap = (f) => (~window=window) => f(window);

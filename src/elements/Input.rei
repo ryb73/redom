@@ -1,4 +1,4 @@
-type t = Types.element(Types.input);
-let cast: Types.element('a) => option(t);
+type t = ReDomTypes.element(ReDomTypes.input);
+let cast: ReDomTypes.element('a) => option(t);
 let create: unit => t;
 let value: t => string;

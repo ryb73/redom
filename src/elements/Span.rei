@@ -1,3 +1,3 @@
-type t = Types.element(Types.span);
-let cast: Types.element('a) => option(t);
+type t = ReDomTypes.element(ReDomTypes.span);
+let cast: ReDomTypes.element('a) => option(t);
 let create: unit => t;
