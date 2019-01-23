@@ -1,7 +1,6 @@
 module Document = { include Document; };
 module Element = { include Element; };
 module Location = { include Location; };
-module Std = { include Std; };
 module Types = { include ReDomTypes; };
 module Window = { include Window; };
 

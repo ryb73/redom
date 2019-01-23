@@ -19,8 +19,5 @@ switch iFrame {
 let span = mSpan |> Js.Option.getExn;
 Js.log(Element.tagName(span));
 
-Js.log(Std.encodeUri("http://blah.com/?ok=s p a c e"));
-Js.log(Std.encodeUriComponent("http://blah.com/?ok=s p a c e"));
-
 Window.alert("alrt");
 Window.prompt(~message="prmtpt") |> Js.log2("!");
