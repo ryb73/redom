@@ -11,6 +11,10 @@
     "webpack-test": "webpack -w",
     "postinstall": "[ ! -f package-links.json ] || ppl link-file"
   },
+  "files": [
+    "/bsconfig.json",
+    "/src"
+  ],
   "keywords": [
     "bucklescript",
     "reason",
