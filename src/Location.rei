@@ -1,6 +1,14 @@
 type t;
 let location: t;
+let protocol: (~location: t=?, unit) => string;
+let host: (~location: t=?, unit) => string;
+let hostname: (~location: t=?, unit) => string;
+let port: (~location: t=?, unit) => string;
+let pathname: (~location: t=?, unit) => string;
 let search: (~location: t=?, unit) => string;
+let hash: (~location: t=?, unit) => string;
+let username: (~location: t=?, unit) => option(string);
+let password: (~location: t=?, unit) => option(string);
+let origin: (~location: t=?, unit) => string;
 let href: (~location: t=?, unit) => string;
 let setHref: (~location: t=?, string) => unit;
-let hash: (~location: t=?, unit) => string;

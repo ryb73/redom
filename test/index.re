@@ -21,3 +21,16 @@ Js.log(Element.tagName(span));
 
 Window.alert("alrt");
 Window.prompt(~message="prmtpt") |> Js.log2("!");
+
+Location.((
+  Js.log2("protocol", protocol()),
+  Js.log2("host", host()),
+  Js.log2("hostname", hostname()),
+  Js.log2("port", port()),
+  Js.log2("pathname", pathname()),
+  Js.log2("search", search()),
+  Js.log2("hash", hash()),
+  Js.log2("username", username()),
+  Js.log2("password", password()),
+  Js.log2("origin", origin()),
+));
