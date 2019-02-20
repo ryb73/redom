@@ -2,6 +2,7 @@ module Document = { include Document; };
 module Element = { include Element; };
 module Location = { include Location; };
 module Types = { include ReDomTypes; };
+module Url = { include Url; };
 module Window = { include Window; };
 
 module Body = { include Body; };
