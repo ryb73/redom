@@ -11,6 +11,7 @@ module Img = { include Img; };
 module Input = { include Input; };
 module Script = { include Script; };
 module Span = { include Span; };
+module Textarea = { include Textarea; };
 
 module Events = {
     module MessageEvent = { include MessageEvent };
