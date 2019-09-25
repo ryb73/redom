@@ -20,6 +20,9 @@
         }
     ],
     "refmt": 3,
+    "warnings": {
+        "number": "-105"
+    },
     "ppx-flags": [ "@ryb73/decco/ppx/ppx_decco.sh" ],
-    "bsc-flags": [ "-w -105", "-bs-super-errors" ]
+    "bsc-flags": [ "-bs-super-errors" ]
 }

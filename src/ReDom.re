@@ -20,3 +20,5 @@ module Events = {
     module DataTransfer = { include DataTransfer };
     module LoadEvent = { include LoadEvent };
 };
+
+[@bs.val] external window: Types.window = "";

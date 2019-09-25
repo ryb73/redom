@@ -19,7 +19,7 @@ switch iFrame {
 let span = mSpan |> Js.Option.getExn;
 Js.log(Element.tagName(span));
 
-Window.alert("alrt");
+Window.alert(~window=ReDom.window, "alrt");
 Window.prompt(~message="prmtpt") |> Js.log2("!");
 
 Location.((
