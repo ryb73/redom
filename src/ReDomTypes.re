@@ -7,4 +7,4 @@ type script;
 type span;
 type textarea;
 
-type window;
+type window = Dom.window;
