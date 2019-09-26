@@ -1,4 +1,4 @@
-type t = ReDomTypes.window;
+type t = Dom.window;
 type listener;
 
 let window: t;

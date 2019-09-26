@@ -32,11 +32,11 @@
     "bs-platform": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
+    "@babel/core": "^7.6.2",
     "babel-loader": "^8.0.6",
     "bs-platform": "^5.0.6",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   },
   "dependencies": {
     "@ryb73/decco": "0.1.0"
