@@ -6,5 +6,3 @@ type input;
 type script;
 type span;
 type textarea;
-
-type window = Dom.window;

@@ -1,4 +1,6 @@
-type t = ReDomTypes.element(ReDomTypes.iframe);
-let cast: ReDomTypes.element('a) => option(t);
+open ReDomTypes;
+
+type t = element(iframe);
+let cast: element('a) => option(t);
 let create: unit => t;
-let contentWindow: t => ReDomTypes.window;
+let contentWindow: t => Dom.window;

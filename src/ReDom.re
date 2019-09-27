@@ -21,4 +21,4 @@ module Events = {
     module LoadEvent = { include LoadEvent };
 };
 
-[@bs.val] external window: Types.window = "";
+[@bs.val] external window: Dom.window = "";
