@@ -13,8 +13,7 @@
   },
   "files": [
     "/bsconfig.json",
-    "/src",
-    "/lib/js/src"
+    "/src"
   ],
   "keywords": [
     "bucklescript",
@@ -29,16 +28,16 @@
     "url": "git@github.com:ryb73/redom.git"
   },
   "peerDependencies": {
-    "bs-platform": "^5.0.0"
+    "bs-platform": "^6.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "babel-loader": "^8.0.6",
-    "bs-platform": "^5.0.6",
+    "bs-platform": "6.0.0",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
-    "@ryb73/decco": "0.1.0"
+    "decco": "^1.0.0"
   }
 }
