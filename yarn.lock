@@ -157,11 +157,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@ryb73/decco@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@ryb73/decco/-/decco-0.1.0.tgz#c39e03377bebe975864bb9c2e05fe3aeb1cd090d"
-  integrity sha512-raSP6kWVYYMHWgBK9ZsjbWsuziglDC+RxQ4G5EaHDcVpDunqxqk3/pdcgpLMdAAAAVQDHBKdOCu9lrZE5y0tDg==
-
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
@@ -598,10 +593,10 @@ browserify-zlib@^0.2.0:
   dependencies:
     pako "~1.0.5"
 
-bs-platform@^5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.0.6.tgz#88c13041fb020479800de3d82c680bf971091425"
-  integrity sha512-6Boa2VEcWJp2WJr38L7bp3J929nYha7gDarjxb070jWzgfPJ/WbzjipmSfnu2eqqk1MfjEIpBipbPz6n1NISwA==
+bs-platform@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-6.0.0.tgz#92b2a45787538289b63b7a4e3611bb661e01c1f6"
+  integrity sha512-6PWtziwGNtR1fbY4EP1h9M8jsLBOVt3/bIa/HCyf6dRA/WNygKXsj3s5QIqmhbjBozCLUtinY8jpas9Y6pdbVA==
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -924,6 +919,11 @@ decamelize@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
+
+decco@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/decco/-/decco-1.0.0.tgz#eeb95776341f74839bed0d874007b263be17499d"
+  integrity sha512-ZwTEGyQkq8QnssDoNhKaCe/AnfmIlHMsr9nGixPBzGoT0st/39SKSvKxIk+8zBiyKSM73lIhlcrCNq31Hvp5eQ==
 
 decode-uri-component@^0.2.0:
   version "0.2.0"

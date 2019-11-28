@@ -1,6 +1,6 @@
 {
     "name": "@ryb73/re-dom",
-    "bs-dependencies": [ "@ryb73/decco" ],
+    "bs-dependencies": [ "decco" ],
     "sources": [
         {
             "dir": "src",
@@ -23,6 +23,6 @@
     "warnings": {
         "number": "-105"
     },
-    "ppx-flags": [ "@ryb73/decco/ppx/ppx_decco.sh" ],
+    "ppx-flags": [ "decco/ppx" ],
     "bsc-flags": [ "-bs-super-errors" ]
 }
